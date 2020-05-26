@@ -1,0 +1,132 @@
+.shop {
+    max-width: 100%;
+}
+
+.shop__gallery {
+    display: flex;
+    width: 100%;
+
+    @include respond (tab-port) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.shop__gallery-item {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.shop__gallery-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container-content {
+    width: 66.666666%;
+
+    @include respond (phone) {
+        width: 100%;
+    }
+}
+
+.small-flex {
+    display: flex;
+}
+
+.shop__gallery-container {
+    display: flex;
+    width: 100%;
+}
+
+.tab-width {
+    width: 33.334%;
+
+    @include respond (phone) {
+        display: none;
+    }
+}
+
+.small-width {
+    width: 50%;
+
+    @include respond (phone) {
+        display: none;
+    }
+}
+
+.shop__btn {
+    width: 100%;
+    background-color: $color-blue-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 73px 20px;
+
+    @include respond (phone) {
+        padding: 27px 15px;
+        ;
+    }
+}
+
+.btn-full {
+    background-color: $color-blue-dark;
+    border: 1px solid $color-white;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 21px 52px 16px 52px;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    @include respond (phone) {
+        padding: 19px 41px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $color-brown;
+}
+
+.shop__gallery-item:hover .overlay {
+    opacity: 0.8;
+}
+
+.shop__text {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.shop__text-gap {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: $color-white;
+    text-transform: uppercase;
+}

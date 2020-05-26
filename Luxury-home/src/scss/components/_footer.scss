@@ -1,0 +1,126 @@
+.footer {
+    padding: 100px 50px;
+    background-color: $color-white;
+
+    @include respond (tab-port) {
+        padding: 0 29px 50px 29px;
+    }
+
+    @include respond (phone) {
+        padding: 57px 29px 62px 29px;
+    }
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-white;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+    @include respond (tab-port) {
+        max-width: 768px;
+    }
+    
+    @include respond (phone) {
+        flex-direction: column;
+        max-width: 360px;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 81px;
+    flex: 1;
+    padding-top: 10px;
+
+    @include respond (tab-port) {
+        padding-top: 0px;
+        margin-bottom: 36px;
+    }
+
+    @include respond (phone) {
+        order: 1;
+        margin-bottom: 10px;
+        padding-right: 0;
+    }
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+}
+
+.footer__scm {
+    list-style: none;
+}
+
+.footer__scm-icon {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer__icon {
+    font-size: 35px;
+}
+
+.icon-twitter {
+    color: $color-blue;
+}
+
+.icon-facebook-with-circle {
+    color: $color-blue-darker;
+}
+
+.icon-pinterest-with-circle {
+    color: $color-red;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond (tab-port) {
+        margin-top: 106px;
+    }
+
+    @include respond (phone) {
+        order: 3;
+        margin-top: 0;
+    }
+}
+
+.logo-photo {
+    width: 50px;
+    height: 50px;
+}
+
+.address {
+    line-height: 1.1;
+
+    @include respond (tab-port) {
+        margin-top: 113px;
+    }
+
+    @include respond (phone) {
+        order: 2;
+        text-align: center;
+        margin-top: 9px;
+        margin-bottom: 20px;
+    }
+}
+
+.address__heading {
+    font-size: 16px;
+    font-style: normal;
+    color: $color-grey;
+}
+
+.address__prop {
+    font-size: 14px;
+    color: $color-grey;
+}

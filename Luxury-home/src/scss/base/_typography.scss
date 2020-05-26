@@ -1,0 +1,228 @@
+@include font-face('Lato', '../assets/fonts/Lato-Regular.ttf', 400, normal);
+@include font-face('Lato', '../assets/fonts/Lato-Light.ttf', 100, normal);
+@include font-face('Lato', '../assets/fonts/Lato-Italic.ttf', 400, italic);
+@include font-face('Lato', '../assets/fonts/Lato-Bold.ttf', 600, normal);
+
+.heading-big {
+    font-size: 64px;
+    color: $color-white;
+    letter-spacing: 9px;
+    word-spacing: 4px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include respond (laptop) {
+        font-size: 54px;
+    }
+    
+    @include respond (tab-port) {
+        font-size: 39px;
+        top: 75%;
+        word-spacing: -2px;
+    }
+
+    @include respond (phone) {
+        width: 72%;
+        letter-spacing: 4px;
+        word-spacing: 0;
+        font-size: 30px;
+        top: 80%;
+    }
+}
+
+.banner__txt {
+    font-size: 30px;
+    font-weight: 600;
+    color: $color-brown;
+}
+
+.heading-big--work {
+    font-size: 64px;
+    color: $color-white;
+    letter-spacing: 9px;
+    word-spacing: 4px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+
+    @include respond (tab-port) {
+        font-size: 39px;
+        top: 75%;
+        word-spacing: -2px;
+    }
+
+    @include respond (phone) {
+        width: 58%;
+        letter-spacing: 4px;
+        word-spacing: 0;
+        font-size: 30px;
+        top: 80%;
+        left: 61%;
+    }
+}
+
+.heading-primary {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+
+    @include respond (tab-port) {
+        margin-bottom: 20px;
+    }
+}
+
+.paragraph {
+    color: $color-grey;
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: normal;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    @include respond (tab-port) {
+        line-height: 2;
+        font-size: 17px;
+    }
+
+    @include respond (phone) {
+        line-height: 1.65;
+        font-size: 16px;
+        font-weight: 100;
+    }
+}
+
+.heading-secondary {
+    margin-bottom: 15px;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+.mail-link {
+    text-decoration: none;
+    color: $color-grey;
+}
+
+.logo-text {
+    font-size: 14px;
+    font-style: italic;
+    color: $color-grey;
+    margin-right: 5px;
+}
+
+.green-link {
+    text-decoration: none;
+    color: $color-brown;
+}
+
+/* About us */
+.rte {
+
+    .about-us__heading {
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $color-grey-dark;
+        margin-bottom: 28px;
+        letter-spacing: 5px;
+        word-spacing: 5px;
+
+        @include respond(tab-port) {
+            font-size: 25px;
+            letter-spacing: 4px;
+            word-spacing: -2px;
+            margin-bottom: 33px;
+        }
+
+        @include respond(phone) {
+            font-size: 18px;
+            letter-spacing: 3px;
+            word-spacing: -3px;
+            margin-bottom: 11px;
+            padding: 0 18px;
+        }
+    }
+
+    .about-us__text {
+        font-size: 24px;
+        font-weight: 300;
+        color: $color-grey;
+        margin-bottom: 24px;
+        line-height: 1.42;
+
+        @include respond(tab-port) {
+            line-height: 1.5;
+            margin-bottom: 29px;
+            font-size: 22px;
+        }
+
+        @include respond(phone) {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 17px;
+            padding: 0 18px;
+        }
+    }
+
+    & p {
+        font-size: 16px;
+        color: $color-grey;
+        margin-bottom: 15px;
+        line-height: 1.5;
+
+        @include respond(tab-port) {
+            font-size: 16px;
+            margin-bottom: 7px;
+            line-height: 1.5;
+        }
+
+        @include respond(phone) {
+            font-size: 14px;
+            margin-bottom: 13px;
+            line-height: 1.47;
+            padding: 0 16px;
+        }
+    }
+
+    & h2 {
+        font-size: 28px;
+        color: $color-grey-dark;
+        margin-bottom: 13px;
+        margin-top: 26px;
+
+        @include respond(tab-port) {
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        @include respond(phone) {
+            margin-top: 0;
+            font-size: 22px;
+            padding: 0 18px;
+        }
+    }
+
+    & h3 {
+        font-size: 24px;
+        color: $color-grey-dark;
+        margin-bottom: 11px;
+        margin-top: 25px;
+
+        @include respond(tab-port) {
+            font-size: 20px;
+            margin-top: 21px;
+        }
+
+        @include respond(phone) {
+            margin-top: 0;
+            font-size: 18px;
+            padding: 0 18px;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.grid__content-box {
+    display: flex;
+
+    @include respond (phone) {
+        flex-direction: column;
+    }
+}
+
+.grid__content-txt-img {
+    display: flex;
+    flex-direction: column;
+    width: 33.3333%;
+    background-color: #fff;
+
+    @include respond (tab-port) {
+        width: 50%;
+    }
+
+    @include respond (phone) {
+        width: 100%;
+        order: 1;
+    }
+}
+
+.grid__item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid__item--img {
+    width: 66.6666%;
+
+    @include respond (tab-port) {
+        width: 50%;
+    }
+
+    @include respond (phone) {
+        width: 100%;
+        height: 24vh;
+    }
+}
+
+.grid__item--three {
+    width: 33.3333%;
+
+    @include respond (tab-port) {
+        width: 50%;
+    }
+
+    @include respond (phone) {
+        width: 100%;
+        height: 24vh;
+    }
+}
+
+.tablet-hidden {
+    @include respond (tab-port) {
+        display: none;
+    }
+
+    @include respond (phone) {
+        display: none;
+    }
+}
+
+.grid-phone {
+    height: 21vh;
+    
+    @include respond (tab-port) {
+        height: 21vh;
+    }
+
+    @include respond (phone) {
+        display: none;
+    }
+}
+
+.grid__img {
+	min-width: 1000%;
+	min-height: 1000%;
+	max-width: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.101);
+    z-index: 1;
+}
+
+.grid__text-box {
+    width: 100%;
+    text-align: center;
+    padding: 71px 68px 111px 68px;;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 58px 30px 60px 30px;
+    }
+
+    @include respond (phone) {
+        padding: 30px 28px 52px 28px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-top: 0px solid #fff;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        border-left: 0px solid #fff;
+        top: 100%;
+        left: 50%;
+        margin-left: -9px;
+        z-index: 10;
+        transform: rotate(45deg);
+        margin-top: -9px;
+        background-color: #fff;
+
+        @include respond (phone) {
+            display: none;
+        }
+    }
+}
+
+.grid__paragraph {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    color: $color-grey;
+
+    &::after {
+        content: "";
+        border-bottom: 1px solid $color-grey;
+        width: 60px;
+        position: absolute;
+        top: 87%;
+        left: 50%;
+        transform: translate(-50%);
+
+        @include respond (tab-port) {
+            top: 87%;
+            width: 50px;
+        }
+
+        @include respond (phone) {
+            width: 50px;
+            top: 91%;
+        }
+    }
+}
+
+.favicon {
+    margin-bottom: 19px;
+
+    @include respond(tab-port) {
+        margin-bottom: 23px;
+    }
+}
+
+.logo-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}

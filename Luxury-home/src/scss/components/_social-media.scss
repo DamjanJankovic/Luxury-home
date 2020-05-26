@@ -1,0 +1,129 @@
+.social-media {
+    background-color: $color-white;
+    text-align: center;
+    padding: 119px 20px 177px 20px;
+
+    @include respond (tab-port) {
+        padding: 119px 45px 141px 45px;
+    }
+
+    @include respond (phone) {
+        padding: 49px 27px 107px 27px;
+    }
+}
+
+.social-media__slides {
+    display: block;
+    padding: 0;
+    max-width: 1068px;
+    margin: 0 auto;
+}
+
+.social-media__container {
+    text-align: center;
+}
+
+.icon-sm {
+    font-size: 35px;
+    color: $color-blue;
+
+    @include respond (phone) {
+        font-size: 32px;
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -113px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    @include respond (tab-port) {
+        bottom: -77px;
+    }
+
+    @include respond (phone) {
+        bottom: -62px;
+    }
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    padding: 0;
+    cursor: pointer;
+    
+    &.slick-active {
+        button {
+            background: $color-grey;
+        }
+    }
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 2px;
+    cursor: pointer;
+    color: transparent;
+    border: 1px solid $color-grey;
+    outline: none;
+    background: $color-white;
+    border-radius: 50%;
+    transition: all .2s;
+
+//    &:hover,
+//    &:focus {
+//        outline: none;
+//        background: $color-grey;
+//    }
+}
+
+.social-media__heading {
+    color: $color-grey-dark;
+    margin-top: 23px;
+    margin-bottom: 13px;
+    word-spacing: 2px;
+    letter-spacing: 1.5px;
+
+    @include respond (phone) {
+        padding: 0 18px;
+        margin-bottom: 3px;
+    }
+}
+
+.social-media__paragraph {
+    color: $color-grey;
+    line-height: 1.6;
+    font-size: 23px;
+    font-style: italic;
+
+    @include respond (phone) {
+        font-size: 18px;
+        line-height: 1.65;
+    }
+}
+
+.social-media__heading-span {
+    color: $color-grey;
+    font-weight: 100;
+
+    &::before {
+        content: "/";
+        margin-left: 12px;
+
+        @include respond (phone) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.banner {
+    position: relative;
+    z-index: 1;
+    height: 83vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include respond (tab-port) {
+        height: 64vh;
+    }
+
+    @include respond (phone) {
+        height: 27vh;
+    }
+}
+
+.banner-about {
+    position: relative;
+    z-index: 1;
+    height: 83vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include respond (phone) {
+        height: 31vh;
+    }
+}
+
+.banner-work {
+    position: relative;
+    z-index: 1;
+    height: 83vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include respond (phone) {
+        height: 31vh;
+    }
+}
+
+.banner-contact {
+    position: relative;
+    z-index: 1;
+    height: 47vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    @include respond (phone) {
+        height: 31vh;
+    }
+}

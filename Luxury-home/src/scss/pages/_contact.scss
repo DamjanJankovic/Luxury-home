@@ -1,0 +1,149 @@
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 29px;
+
+    @include respond (phone) {
+        padding: 0 20px;
+        margin-top: 12px;
+    }
+}
+
+.contact__input {
+    width: 400px;
+    outline: none;
+    font-size: 18px;
+    font-style: italic;
+    padding: 11px;
+    color: $color-grey-dark;
+    margin-top: 10px;
+    margin-bottom: 26px;
+
+    @include respond (tab-port) {
+        width: 55%;
+    }
+
+    @include respond (phone) {
+        width: 100%;
+    }
+}
+
+.contact__textarea {
+    padding: 11px;
+    outline: none;
+    font-size: 18px;
+    font-style: italic;
+    color: $color-grey-dark;
+    margin-top: 10px;
+    margin-bottom: 26px;
+    max-width: 725px;
+}
+
+.contact__checkbox + .contact__label {
+    display: block;
+    margin-bottom: 26px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.contact__checkbox {
+    display: none;
+}
+
+.contact__checkbox + .contact__label:before {
+    content: "\2714";
+    border: 1px solid $color-grey;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding-left: 2px;
+    padding-bottom: 3px;
+    margin-right: 2px;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+}
+
+.contact__checkbox + .contact__label:active:before {
+    transform: scale(0);
+}
+
+.contact__checkbox:checked + .contact__label:before {
+    color: $color-brown;
+}
+
+.label,
+.contact__label {
+    color: $color-grey;
+}
+
+.btn-submit--thin {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 21px 45px;
+    margin-left: 6px;
+    background-color: $color-brown;
+    color: $color-white;
+    font-size: 24px;
+
+    @include respond (phone) {
+        margin-left: 0;
+        margin-top: -10px;
+        width: 100%;
+        padding: 12px 45px;
+        font-size: 20px;
+    }
+}
+
+/*  ASIDE */
+.contact__txt {
+    text-align: left;
+    background-color: #fff;
+    padding: 22px;
+
+    @include respond(tab-port) {
+        padding: 32px 22px;
+    }
+
+    @include respond(phone) {
+        margin: 20px 20px;
+        padding: 20px 22px;
+    }
+}
+
+.heading-contact {
+    font-size: 24px;
+    color: $color-grey-dark;
+    margin-bottom: 15px;
+}
+
+.contact__address {
+    line-height: 1.8;
+}
+
+.contact__address__prop {
+    font-size: 16px;
+    color: $color-grey;
+    font-style: normal;
+}
+
+.contact__box {
+    background-color: #fff;
+    padding: 22px;
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.7;
+
+    @include respond(tab-port) {
+        margin-top: 50px;
+        margin-left: 25px;
+        padding-right: 101px;
+    }
+
+    @include respond(phone) {
+        padding: 15px 31px 15px 20px;
+        margin: 0 20px;
+    }
+}

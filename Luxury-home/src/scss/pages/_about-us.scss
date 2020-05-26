@@ -1,0 +1,297 @@
+.about-us {
+    background-color: $color-white;
+    position: relative;
+    z-index: 1;
+}
+
+.about-us__container {
+    display: flex;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 27px 47px 125px 45px;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        padding: 29px 19px 60px 19px;
+    }
+
+    @include respond(phone) {
+        padding: 17px 0 26px 0;
+    }
+}
+
+
+/* SIDEBAR */
+.about-us__aside {
+    margin-right: 36px;
+    width: 261px;
+    background-color: $color-white;
+    position: relative;
+    z-index: 1;
+
+    @include respond(tab-port) {
+        order: 1;
+        display: flex;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    @include respond(phone) {
+        flex-direction: column;
+        margin-right: 0;
+    }
+}
+
+.about-us__box {
+
+    @include respond(tab-port) {
+        flex: 0 0 48%;
+        margin-top: 50px;
+    }
+
+    @include respond(phone) {
+        margin-top: 15px;
+    }
+}
+
+.aside__photo {
+
+    @include respond(tab-port) {
+        height: 10vh;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.aside__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
+.about-us__txt {
+    padding: 39px 20px 36px 20px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+
+    @include respond(tab-port) {
+        padding: 29px 20px 18px 20px;
+    }
+
+    @include respond(phone) {
+        padding-bottom: 83px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-top: 0px solid #fff;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        border-left: 0px solid #fff;
+        top: 100%;
+        left: 50%;
+        margin-left: -9px;
+        z-index: 10;
+        transform: rotate(45deg);
+        margin-top: -9px;
+        background-color: #fff;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+}
+
+.about-us__paragraph {
+    text-align: left;
+    line-height: 1.9;
+    font-size: 16px;
+    color: $color-grey;
+}
+
+
+/* BREADCRUMBS */
+.breadcrumbs {
+    max-width: 1195px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 20px;
+
+    @include respond(phone) {
+        margin-top: 15px;
+    }
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb__item {
+    list-style: none;
+
+    &:not(:last-of-type)::after {
+        content: "/";
+        color: $color-grey;
+        margin: 0 3px;
+    }
+}
+
+.breadcrumb__link {
+    color: $color-grey;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover {
+        color: $color-brown;
+    }
+}
+
+/* ACCORDION */
+.about-us__accordion {
+    margin-top: 30px;
+
+    @include respond(tab-port) {
+        flex: 0 0 48%;
+        margin-left: auto;
+        margin-top: 50px;
+        padding: 0 17px;
+    }
+
+    @include respond(phone) {
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 0 29px;
+    }
+}
+
+.panel-body {
+    display: none;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid $color-brown;
+}
+
+.panel-txt {
+    color: $color-grey;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    padding-bottom: 20px;
+
+    @include respond(tab-port) {
+        line-height: 1.6;
+        padding-bottom: 27px;
+    }
+
+    @include respond(phone) {
+        line-height: 1.6;
+        padding-bottom: 32px;
+    }
+}
+
+.panel {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 19px;
+        right: 11px;
+        width: 20px;
+        height: 2px;
+        background: $color-brown;
+        z-index: 10;
+    }
+
+    &::after {
+        transform: rotate(-90deg);
+        transition: all .2s;
+    }
+
+    &.active::after {
+        transform: rotate(0deg);
+    }
+}
+
+.panel-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $color-brown;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    padding: 10px;
+    border-bottom: 1px solid $color-brown;
+    position: relative;
+}
+
+/* RTE */
+.rte {
+    flex: 1;
+
+    & figure {
+        padding-bottom: 6px;
+        text-align: center;
+        border-bottom: 1px solid $color-grey;
+        overflow: hidden;
+        position: relative;
+
+        @include respond(tab-port) {
+            margin-top: 14px;
+            padding-bottom: 11px;
+        }
+
+        @include respond(phone) {
+            margin-top: 0;
+            margin-bottom: 16px;
+            padding-bottom: 9px;
+        }
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 8px;
+
+        @include respond(tab-port) {
+            margin-bottom: 9px;
+            margin-top: 0;
+        }
+
+        @include respond(phone) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.photo-description {
+    font-style: italic;
+    font-size: 14px;
+    color: $color-grey;
+    padding-right: 50px;
+
+    @include respond(tab-port) {
+        padding-right: 0;
+    }
+
+    @include respond(phone) {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,17 @@
+.section-about {
+    background-color: $color-white;
+}
+
+.section-about__container {
+    text-align: center;
+    background-color: $color-white;
+    padding: 114px 20px 138px 20px;
+    
+    @include respond(tab-port) {
+        padding: 114px 22px 169px 22px;
+    }
+    
+    @include respond(phone) {
+        padding: 19px 14px 31px 14px;
+    }
+}
